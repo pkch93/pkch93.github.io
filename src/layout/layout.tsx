@@ -7,9 +7,8 @@ import Header from '../components/header'
 import './layout.css'
 
 const LayoutContainer = styled.div`
-  margin: 0 auto;
-  max-width: 960;
-  padding: 0 1.0875rem 1.45rem;
+  margin: 0 20vw;
+  max-width: 1000px;
 `
 
 const Layout = ({ children }) => {
@@ -28,11 +27,6 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <LayoutContainer>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
       </LayoutContainer>
     </>
   )

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
+import { light, dark } from '../shared/style'
 
 import { Moon } from '@styled-icons/fa-solid'
 import { Sun } from '@styled-icons/open-iconic'
@@ -18,7 +19,7 @@ const ModeButton = styled.button`
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   margin: 0 0.5rem;
-  background-color: #fcd440;
+  background-color: ${light};
   transition: 0.5s;
 
   &:before {
@@ -37,7 +38,7 @@ const ModeButton = styled.button`
   }
 
   &.dark {
-    background-color: #4f6988;
+    background-color: ${dark};
   }
 
   &.dark:before {
@@ -48,12 +49,12 @@ const ModeButton = styled.button`
 
 const SunIndicator = styled(Sun)`
   width: 1rem;
-  color: #fcd440;
+  color: ${light};
 `
 
 const MoonIndicator = styled(Moon)`
   width: 1rem;
-  color: #4f6988;
+  color: ${dark};
 `
 
 export default ({ mode, changeMode }: ModeProps) => (

@@ -1,10 +1,11 @@
 {
-  "name": "pkch's portpolio",
+  "name": "pkch_portpolio",
   "private": true,
   "description": "개발자 박경철의 포트폴리오 사이트",
   "version": "1.0.0",
-  "author": "pkch03 <pkch9377@gmail.com>",
+  "author": "pkch93 <pkch9377@gmail.com>",
   "dependencies": {
+    "@types/react-redux": "^7.1.7",
     "@types/styled-components": "^5.0.1",
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.20.12",
@@ -16,18 +17,25 @@
     "gatsby-plugin-sharp": "^2.5.3",
     "gatsby-plugin-styled-components": "^3.2.1",
     "gatsby-plugin-typescript": "^2.3.1",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.2.2",
     "gatsby-transformer-sharp": "^2.4.3",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-helmet": "^5.2.1",
-    "styled-components": "^5.1.0"
+    "react-redux": "^7.2.0",
+    "redux": "^4.0.5",
+    "styled-components": "^5.1.0",
+    "styled-icons": "^10.2.1"
   },
   "devDependencies": {
+    "@testing-library/jest-dom": "^5.5.0",
+    "@testing-library/react": "^10.0.3",
     "@types/node": "^13.11.1",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
+    "jest": "^25.4.0",
     "prettier": "^1.19.1",
     "tslint": "^6.1.1",
     "tslint-config-prettier": "^1.18.0",
@@ -44,7 +52,7 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

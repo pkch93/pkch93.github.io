@@ -1,49 +1,61 @@
 import { Link } from 'gatsby'
-import PropTypes from 'prop-types'
 import React from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { RootState } from '../modules'
+import { changeDarkMode } from '../modules/mode'
 
 import styled from 'styled-components'
+import DarkMode from './DarkMode'
 
 const HeaderContainer = styled.header`
-  background: rebeccapurple;
-  marginbottom: 1.45rem;
+  background: #000;
+  margin-bottom: 1.45rem;
 `
 
 const HeaderWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
-  maxwidth: 960;
-  padding: 1.45rem 1.0875rem;
+  padding: 1rem;
 `
 
 const HeaderTitle = styled.h1`
   margin: 0;
+  font-weight: bold;
 `
 
 const RootLink = styled(Link)`
   color: white;
-  textdecoration: none;
+  text-decoration: none;
 `
 
-const Header = ({ siteTitle }: HeaderProps) => (
-  <HeaderContainer>
-    <HeaderWrapper>
-      <HeaderTitle>
-        <RootLink to="/">{siteTitle}</RootLink>
-      </HeaderTitle>
-    </HeaderWrapper>
-  </HeaderContainer>
-)
+const Header = ({ siteTitle }: HeaderProps) => {
+  const mode = useSelector((state: RootState) => state.mode.dark)
+  const dispatch = useDispatch()
+
+  const change = () => {
+    dispatch(changeDarkMode(!mode))
+  }
+
+  return (
+    <HeaderContainer>
+      <HeaderWrapper>
+        <HeaderTitle>
+          <RootLink to="/">{siteTitle}</RootLink>
+        </HeaderTitle>
+        <DarkMode mode={mode} changeMode={change} />
+      </HeaderWrapper>
+    </HeaderContainer>
+  )
+}
 
 interface HeaderProps {
   siteTitle: String
 }
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
 Header.defaultProps = {
-  siteTitle: ``,
+  siteTitle: '',
 }
 
 export default Header

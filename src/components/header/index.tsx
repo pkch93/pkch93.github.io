@@ -1,15 +1,15 @@
 import { Link } from 'gatsby'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
-import { RootState } from '../modules'
-import { changeDarkMode } from '../modules/mode'
+import { RootState } from '../../modules'
+import { changeDarkMode } from '../../modules/mode'
 
 import styled from 'styled-components'
+
 import DarkMode from './DarkMode'
 
 const HeaderContainer = styled.header`
   background: #000;
-  margin-bottom: 1.45rem;
 `
 
 const HeaderWrapper = styled.div`
@@ -34,17 +34,16 @@ const Header = ({ siteTitle }: HeaderProps) => {
   const mode = useSelector((state: RootState) => state.mode.dark)
   const dispatch = useDispatch()
 
-  const change = () => {
-    dispatch(changeDarkMode(!mode))
-  }
-
   return (
     <HeaderContainer>
       <HeaderWrapper>
         <HeaderTitle>
           <RootLink to="/">{siteTitle}</RootLink>
         </HeaderTitle>
-        <DarkMode mode={mode} changeMode={change} />
+        <DarkMode
+          mode={mode}
+          changeMode={() => dispatch(changeDarkMode(!mode))}
+        />
       </HeaderWrapper>
     </HeaderContainer>
   )

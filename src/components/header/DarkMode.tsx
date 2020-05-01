@@ -1,7 +1,7 @@
 import React from 'react'
 
 import styled from 'styled-components'
-import { light, dark } from '../shared/style'
+import { light, dark } from '../../shared/style'
 
 import { Moon } from '@styled-icons/fa-solid'
 import { Sun } from '@styled-icons/open-iconic'

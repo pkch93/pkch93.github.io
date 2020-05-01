@@ -1,19 +1,31 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
-import { Provider } from 'react-redux'
-import { createStore } from 'redux'
-import rootReducer from '../modules'
+import { useSelector } from 'react-redux'
+import { RootState } from '../modules'
 
-import Header from '../components/header'
+import styled from 'styled-components'
+
+import Header from '../components/Header'
 import './layout.css'
+import { dark } from '../shared/style'
 
 const LayoutContainer = styled.div`
-  margin: 0 20vw;
+  height: 100%;
 `
 
-const store = createStore(rootReducer)
+const Main = styled.main`
+  height: 100%;
+  padding: 0 20vw;
+  padding-top: 1.45rem;
+  color: #000;
+  transition: 0.5s;
+
+  &.dark {
+    color: #fff;
+    background-color: ${dark};
+  }
+`
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,14 +38,14 @@ const Layout = ({ children }) => {
     }
   `)
 
+  const mode = useSelector((state: RootState) => state.mode.dark)
+
   return (
     <>
-      <Provider store={store}>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <LayoutContainer>
-          <main>{children}</main>
-        </LayoutContainer>
-      </Provider>
+      <Header siteTitle={data.site.siteMetadata.title} />
+      <LayoutContainer>
+        <Main className={mode ? 'dark' : ''}>{children}</Main>
+      </LayoutContainer>
     </>
   )
 }

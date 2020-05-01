@@ -13,6 +13,10 @@ const Holder = styled.div`
   height: 100px;
   border-radius: 0 5px 5px 0;
   background-color: rgba(0, 0, 0, 0.3);
+
+  &.hidden {
+    display: none;
+  }
 `
 
 const RightIndicator = styled(TriangleRight)`
@@ -28,7 +32,7 @@ export default () => {
 
   return (
     <>
-      <Holder>
+      <Holder className={isNavigationOpened ? 'hidden' : ''}>
         <RightIndicator onClick={() => dispatch(openNavigationBar())} />
       </Holder>
     </>

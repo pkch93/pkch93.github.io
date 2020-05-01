@@ -8,6 +8,7 @@ import styled from 'styled-components'
 
 import Header from '../components/Header'
 import NavigationHolder from '../components/navigation/holder'
+import NavigationBar from '../components/navigation/bar'
 import './layout.css'
 import { dark } from '../shared/style'
 
@@ -21,6 +22,7 @@ const Main = styled.main`
   padding-top: 1.45rem;
   color: #000;
   transition: 0.5s;
+  z-index: 100;
 
   &.dark {
     color: #fff;
@@ -43,8 +45,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <NavigationHolder />
       <Header siteTitle={data.site.siteMetadata.title} />
+      <NavigationHolder />
+      <NavigationBar />
       <LayoutContainer>
         <Main className={mode ? 'dark' : ''}>{children}</Main>
       </LayoutContainer>

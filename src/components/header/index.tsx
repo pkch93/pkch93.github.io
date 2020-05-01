@@ -2,7 +2,7 @@ import { Link } from 'gatsby'
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { RootState } from '../../modules'
-import { changeDarkMode } from '../../modules/mode'
+import { changeDarkMode } from '../../modules/mode/dark'
 
 import styled from 'styled-components'
 

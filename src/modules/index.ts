@@ -1,8 +1,9 @@
 import { combineReducers } from 'redux'
-import mode from './mode'
+import ModeReducers from './mode'
 
 const rootReducer = combineReducers({
-  mode,
+  mode: ModeReducers.DarkModeReducer,
+  navi: ModeReducers.NavigationModeReducer,
 })
 
 export default rootReducer

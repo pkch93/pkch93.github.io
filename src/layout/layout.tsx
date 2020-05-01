@@ -7,6 +7,7 @@ import { RootState } from '../modules'
 import styled from 'styled-components'
 
 import Header from '../components/Header'
+import NavigationHolder from '../components/navigation/holder'
 import './layout.css'
 import { dark } from '../shared/style'
 
@@ -42,6 +43,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <NavigationHolder />
       <Header siteTitle={data.site.siteMetadata.title} />
       <LayoutContainer>
         <Main className={mode ? 'dark' : ''}>{children}</Main>

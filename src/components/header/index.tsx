@@ -9,6 +9,8 @@ import styled from 'styled-components'
 import DarkMode from './DarkMode'
 
 const HeaderContainer = styled.header`
+  position: sticky;
+  top: 0;
   background: #bdc3c7; /* fallback for old browsers */
   background: -webkit-linear-gradient(
     to right,
@@ -20,6 +22,7 @@ const HeaderContainer = styled.header`
     #2c3e50,
     #bdc3c7
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  z-index: 100;
 `
 
 const HeaderWrapper = styled.div`
@@ -32,12 +35,13 @@ const HeaderWrapper = styled.div`
 
 const HeaderTitle = styled.h1`
   margin: 0;
-  font-weight: bold;
 `
 
 const RootLink = styled(Link)`
   color: white;
   text-decoration: none;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
 `
 
 const Header = ({ siteTitle }: HeaderProps) => {

@@ -17,6 +17,7 @@ const ModeButton = styled.button`
   height: 30px;
   padding: 0;
   box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+  border: none;
   border-radius: 20px;
   margin: 0 0.5rem;
   background-color: ${light};

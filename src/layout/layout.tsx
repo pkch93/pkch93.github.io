@@ -6,7 +6,7 @@ import { RootState } from '../modules'
 
 import styled from 'styled-components'
 
-import Header from '../components/Header'
+import Header from '../components/header'
 import NavigationHolder from '../components/navigation/holder'
 import NavigationBar from '../components/navigation/bar'
 import './layout.css'
@@ -14,6 +14,10 @@ import { dark } from '../shared/style'
 
 const LayoutContainer = styled.div`
   height: 100%;
+
+  @media (max-width: 320px) {
+    width: 320px;
+  }
 `
 
 const Main = styled.main`

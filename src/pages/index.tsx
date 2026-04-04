@@ -5,6 +5,7 @@ import Skills from "../components/Skills"
 import Experience from "../components/Experience"
 import Projects from "../components/Projects"
 import Education from "../components/Education"
+import Certificates from "../components/Certificates"
 import Footer from "../components/Footer"
 import type { SiteMetadata } from "../types"
 
@@ -16,7 +17,7 @@ type DataProps = {
 
 const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
   const metadata = data.site.siteMetadata;
-  const { author, contact, skills, experience, projects, education } = metadata;
+  const { author, contact, skills, experience, projects, education, certificates } = metadata;
 
   return (
     <main className="min-h-screen bg-gray-50 py-10 px-4 font-sans text-gray-800">
@@ -25,6 +26,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
         <Skills skills={skills} />
         <Experience experience={experience} />
         <Projects projects={projects} />
+        <Certificates certificates={certificates} />
         <Education education={education} />
       </div>
       <Footer author={author} contact={contact} />
@@ -75,6 +77,10 @@ export const query = graphql`
           school
           degree
           period
+        }
+        certificates {
+          title
+          date
         }
       }
     }

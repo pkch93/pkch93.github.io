@@ -37,6 +37,11 @@ export interface EducationItem {
   period: string;
 }
 
+export interface CertificateItem {
+  title: string;
+  date: string;
+}
+
 export interface SiteMetadata {
   title: string;
   author: Author;
@@ -45,4 +50,5 @@ export interface SiteMetadata {
   experience: ExperienceItem[];
   projects: ProjectItem[];
   education: EducationItem[];
+  certificates: CertificateItem[];
 }

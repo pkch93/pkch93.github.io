@@ -37,14 +37,13 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
 export default IndexPage
 
 export const Head: React.FC<HeadProps<DataProps>> = ({ data }) => {
-  return <title>{data.site.siteMetadata.title}</title>
+  return <title>박경철의 포트폴리오</title>
 }
 
 export const query = graphql`
   query IndexPageQuery {
     site {
       siteMetadata {
-        title
         author {
           name
           role

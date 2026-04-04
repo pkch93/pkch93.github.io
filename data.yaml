@@ -7,7 +7,8 @@ author:
 contact:
   email: "dev.pkch@gmail.com"
   github: "github.com/pkch93"
-  location: "서울시 송파구"
+  linkedin: "www.linkedin.com/in/경철-박-466b231a5/"
+  location: "서울시"
 skills:
   - category: "Languages"
     items:
@@ -34,9 +35,9 @@ skills:
       - "JUnit"
       - "Testcontainers"
 experience:
-  - company: "우아한형제들 (배달의민족)"
+  - company: "우아한형제들"
     period: "2020.01 - 현재"
-    role: "Backend Developer (파트장급)"
+    role: "Backend Developer"
     achievements:
       - "서버 기술 의사결정 리드 및 파트장급 역할 수행"
       - "타임세일 프로젝트, 푸드전시콘텐츠플랫폼, 배민우리동네, 서비스개발 등 사내 주요 핵심 시스템 개발 및 운영"

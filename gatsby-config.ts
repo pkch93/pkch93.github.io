@@ -1,9 +1,17 @@
 import type { GatsbyConfig } from "gatsby";
 import fs from "fs";
 import yaml from "js-yaml";
+import path from "path";
 
-// data.yaml 파일을 동기적으로 읽어와 파싱합니다.
-const siteMetadata = yaml.load(fs.readFileSync("./data.yaml", "utf8")) as Record<string, any>;
+// src/data 디렉토리의 모든 YAML 파일들을 읽어와 siteMetadata를 구성합니다.
+const dataDir = "./src/data";
+const siteMetadata = fs.readdirSync(dataDir)
+  .filter(file => file.endsWith(".yaml") || file.endsWith(".yml"))
+  .reduce((acc, file) => {
+    const filePath = path.join(dataDir, file);
+    const content = yaml.load(fs.readFileSync(filePath, "utf8")) as Record<string, any>;
+    return { ...acc, ...content };
+  }, {});
 
 const config: GatsbyConfig = {
   siteMetadata,

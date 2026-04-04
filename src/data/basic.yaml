@@ -1,0 +1,11 @@
+title: "박경철 - Backend Developer"
+siteUrl: "https://pkch93.github.io"
+author:
+  name: "박경철"
+  role: "Backend Developer"
+  summary: "배달의민족 앱 첫화면을 포함한 핵심 서비스의 백엔드를 6년간 개발해온 백엔드 개발자입니다. 현재 파트장급 레벨로 팀의 서버 기술 의사결정을 리드하고 있으며, 신규 시스템 아키텍처 설계부터 10만 TPS 이상의 대용량 서비스 운영까지 직접 경험했습니다."
+contact:
+  email: "dev.pkch@gmail.com"
+  github: "github.com/pkch93"
+  linkedin: "www.linkedin.com/in/경철-박-466b231a5/"
+  location: "서울시"

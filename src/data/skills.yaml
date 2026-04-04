@@ -1,0 +1,25 @@
+skills:
+  - category: "Languages"
+    items:
+      - "Kotlin"
+      - "Java"
+  - category: "Frameworks"
+    items:
+      - "Spring Boot"
+      - "Spring Webflux"
+      - "Spring Batch"
+  - category: "Databases"
+    items:
+      - "MySQL"
+      - "Redis"
+      - "Amazon DynamoDB"
+      - "OpenSearch"
+  - category: "Messaging"
+    items:
+      - "Kafka"
+      - "Amazon SQS"
+  - category: "Others"
+    items:
+      - "Apache Thrift (RPC)"
+      - "JUnit"
+      - "Testcontainers"

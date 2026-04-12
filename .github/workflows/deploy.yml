@@ -55,10 +55,7 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
         with:
-          # Automatically inject pathPrefix in your Gatsby config file.
-          # 
-          # You can also specify a site or data file to set the prefix from.
-          # static_site_generator: gatsby
+          static_site_generator: gatsby
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Gatsby

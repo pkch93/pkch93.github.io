@@ -1,5 +1,6 @@
 import * as React from "react"
 import { graphql, type HeadProps, type PageProps } from "gatsby"
+import favicon from "../images/favicon.ico"
 import Header from "../components/Header"
 import Skills from "../components/Skills"
 import Experience from "../components/Experience"
@@ -37,7 +38,12 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
 export default IndexPage
 
 export const Head: React.FC<HeadProps<DataProps>> = ({ data }) => {
-  return <title>박경철의 포트폴리오</title>
+  return (
+    <>
+      <title>박경철의 포트폴리오</title>
+      <link rel="icon" href={favicon} />
+    </>
+  )
 }
 
 export const query = graphql`

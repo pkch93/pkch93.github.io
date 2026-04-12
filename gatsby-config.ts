@@ -1,22 +1,27 @@
 import type { GatsbyConfig } from "gatsby";
-import fs from "fs";
-import yaml from "js-yaml";
-import path from "path";
-import dotenv from "dotenv";
+import * as fs from "fs";
+import * as yaml from "js-yaml";
+import * as path from "path";
+import * as dotenv from "dotenv";
 
+// 환경 변수 로드 (.env.development, .env.production 등)
+// 파일이 없더라도 에러가 나지 않도록 처리합니다.
 dotenv.config({
-  path: `.env.${process.env.NODE_ENV}`,
+  path: `.env.${process.env.NODE_ENV || 'development'}`,
 });
 
 // src/data 디렉토리의 모든 YAML 파일들을 읽어와 siteMetadata를 구성합니다.
-const dataDir = "./src/data";
-const siteMetadata = fs.readdirSync(dataDir)
-  .filter(file => file.endsWith(".yaml") || file.endsWith(".yml"))
-  .reduce((acc, file) => {
-    const filePath = path.join(dataDir, file);
-    const content = yaml.load(fs.readFileSync(filePath, "utf8")) as Record<string, any>;
-    return { ...acc, ...content };
-  }, {});
+const dataDir = path.resolve("./src/data");
+const siteMetadata = fs.existsSync(dataDir)
+  ? fs.readdirSync(dataDir)
+      .filter(file => file.endsWith(".yaml") || file.endsWith(".yml"))
+      .reduce((acc, file) => {
+        const filePath = path.join(dataDir, file);
+        const fileContent = fs.readFileSync(filePath, "utf8");
+        const content = yaml.load(fileContent) as Record<string, any>;
+        return { ...acc, ...content };
+      }, {})
+  : {};
 
 const config: GatsbyConfig = {
   siteMetadata,

@@ -63,7 +63,11 @@ export const query = graphql`
         }
         skills {
           category
-          items
+          description
+          items {
+            name
+            comment
+          }
         }
         experience {
           company

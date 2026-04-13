@@ -11,9 +11,15 @@ export interface Contact {
   location: string;
 }
 
+export interface SkillItem {
+  name: string;
+  comment: string;
+}
+
 export interface SkillGroup {
   category: string;
-  items: string[];
+  description: string;
+  items: SkillItem[];
 }
 
 export interface ExperienceItem {

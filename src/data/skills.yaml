@@ -28,7 +28,7 @@ skills:
     description: "실무에서 프로덕션 레벨로 사용해 보았고, 주어진 요구사항을 구현할 수 있는 기술"
     items:
       - name: "Spring Security"
-        comment: "OAuth2, JWT 등을 활용한 인증/인가 아키텍처를 설계하고 보안 정책을 애플리케이션에 적용할 수 있습니다."
+        comment: "Spring Security를 활용해 보안 정책을 애플리케이션에 적용할 수 있습니다."
       - name: "OpenSearch"
         comment: "데이터 기반의 전문 검색 기능 구현에 활용해 보았습니다."
       - name: "Amazon DynamoDB"

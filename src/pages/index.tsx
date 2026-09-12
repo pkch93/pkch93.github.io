@@ -24,11 +24,10 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
     <main className="min-h-screen bg-gray-50 py-10 px-4 font-sans text-gray-800">
       <div className="max-w-4xl mx-auto bg-white shadow-sm p-10 sm:p-16 border border-gray-100">
         <Header author={author} contact={contact} />
-        <Skills skills={skills} />
         <Experience experience={experience} />
         <Projects projects={projects} />
+        <Skills skills={skills} />
         <Certificates certificates={certificates} />
-        <Education education={education} />
       </div>
       <Footer author={author} contact={contact} />
     </main>

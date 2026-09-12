@@ -20,11 +20,11 @@ const Header: React.FC<Props> = ({ author, contact }) => {
           </div>
           <div className="flex items-center gap-1.5">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" /></svg>
-            <a href={`https://${contact.github}`} target="_blank" rel="noreferrer" className="hover:underline">{contact.github}</a>
+            <a href={`${contact.github}`} target="_blank" rel="noreferrer" className="hover:underline">{contact.github}</a>
           </div>
           <div className="flex items-center gap-1.5">
             <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" /></svg>
-            <a href={`https://${contact.linkedin}`} target="_blank" rel="noreferrer" className="hover:underline">{decodeURIComponent(contact.linkedin)}</a>
+            <a href={`${contact.linkedin}`} target="_blank" rel="noreferrer" className="hover:underline">{decodeURIComponent(contact.linkedin)}</a>
           </div>
         </div>
       </header>

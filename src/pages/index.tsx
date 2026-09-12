@@ -2,7 +2,6 @@ import * as React from "react"
 import { graphql, type HeadProps, type PageProps } from "gatsby"
 import favicon from "../images/favicon.ico"
 import Header from "../components/Header"
-import Skills from "../components/Skills"
 import CoreSkills from "../components/CoreSkills"
 import Experience from "../components/Experience"
 import Projects from "../components/Projects"
@@ -28,7 +27,6 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
         <CoreSkills skills={skills} />
         <Experience experience={experience} />
         <Projects projects={projects} />
-        <Skills skills={skills} />
         <Certificates certificates={certificates} />
       </div>
       <Footer author={author} contact={contact} />

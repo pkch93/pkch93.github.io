@@ -35,6 +35,7 @@ export interface ProjectItem {
   description: string;
   stack: string;
   details: string[];
+  highlights?: string[];
 }
 
 export interface EducationItem {

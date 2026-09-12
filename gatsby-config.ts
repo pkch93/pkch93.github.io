@@ -27,6 +27,12 @@ const config: GatsbyConfig = {
   siteMetadata: {
     ...siteMetadata,
     siteUrl: "https://pkch93.github.io",
+    title: "박경철 | Backend Engineer",
+    description: "대한민국 최대 배달 플랫폼의 홈 화면·전시 영역 서버를 담당하며, 대용량 트래픽을 안정적으로 처리하는 백엔드 시스템을 설계·운영해 온 엔지니어입니다.",
+    authorName: "박경철",
+    keywords: "Backend Engineer, Kotlin, Java, Spring Boot, AWS, 고가용성, 대용량 트래픽, 배달의민족, 우아한형제들",
+    ogImage: "/og-image.png",
+    twitterCard: "summary_large_image",
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin

@@ -49,6 +49,13 @@ export const query = graphql`
   query IndexPageQuery {
     site {
       siteMetadata {
+        siteUrl
+        title
+        description
+        authorName
+        keywords
+        ogImage
+        twitterCard
         author {
           name
           role
@@ -80,6 +87,7 @@ export const query = graphql`
           description
           stack
           details
+          highlights
         }
         education {
           school

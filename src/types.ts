@@ -50,7 +50,13 @@ export interface CertificateItem {
 }
 
 export interface SiteMetadata {
+  siteUrl: string;
   title: string;
+  description: string;
+  authorName: string;
+  keywords: string;
+  ogImage?: string;
+  twitterCard?: string;
   author: Author;
   contact: Contact;
   skills: SkillGroup[];

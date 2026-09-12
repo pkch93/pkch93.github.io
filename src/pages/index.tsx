@@ -3,6 +3,7 @@ import { graphql, type HeadProps, type PageProps } from "gatsby"
 import favicon from "../images/favicon.ico"
 import Header from "../components/Header"
 import Skills from "../components/Skills"
+import CoreSkills from "../components/CoreSkills"
 import Experience from "../components/Experience"
 import Projects from "../components/Projects"
 import Education from "../components/Education"
@@ -24,6 +25,7 @@ const IndexPage: React.FC<PageProps<DataProps>> = ({ data }) => {
     <main className="min-h-screen bg-gray-50 py-10 px-4 font-sans text-gray-800">
       <div className="max-w-4xl mx-auto bg-white shadow-sm p-10 sm:p-16 border border-gray-100">
         <Header author={author} contact={contact} />
+        <CoreSkills skills={skills} />
         <Experience experience={experience} />
         <Projects projects={projects} />
         <Skills skills={skills} />

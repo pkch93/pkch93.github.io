@@ -8,7 +8,7 @@ interface Props {
 const Projects: React.FC<Props> = ({ projects }) => {
   return (
     <section className="mb-14">
-      <h3 className="text-2xl font-bold text-gray-900 border-b-2 border-gray-200 pb-2 mb-6">Projects</h3>
+      <h3 className="text-2xl font-bold text-gray-900 border-b-2 border-gray-200 pb-2 mb-6">주요 프로젝트</h3>
       <div className="space-y-10">
         {projects.map((project, index) => (
           <div key={index}>
@@ -19,11 +19,12 @@ const Projects: React.FC<Props> = ({ projects }) => {
               <span className="text-sm font-medium text-gray-500">{project.period}</span>
             </div>
             <p className="text-sm text-gray-700 font-medium mb-2">{project.description}</p>
-            <div className="mb-3">
-              <span className="text-xs font-mono bg-gray-100 border border-gray-200 text-gray-600 px-2 py-1 rounded inline-block">
-                {project.stack}
-              </span>
-            </div>
+            {project.subproject && (
+              <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between mt-4 mb-2">
+                <h5 className="text-sm font-semibold text-gray-800">{project.subproject.name}</h5>
+                <span className="text-sm text-gray-500">{project.subproject.period}</span>
+              </div>
+            )}
             <ul className="list-disc list-outside ml-5 space-y-1.5 text-gray-700 text-sm leading-relaxed">
               {project.details.map((detail, idx) => (
                 <li key={idx}>{detail}</li>

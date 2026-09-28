@@ -7,8 +7,8 @@ interface Props {
 
 const Education: React.FC<Props> = ({ education }) => {
   return (
-    <section>
-      <h3 className="text-2xl font-bold text-gray-900 border-b-2 border-gray-200 pb-2 mb-6">Education</h3>
+    <section className="mb-10">
+      <h3 className="text-2xl font-bold text-gray-900 border-b-2 border-gray-200 pb-2 mb-6">학력</h3>
       <div className="space-y-6">
         {education.map((edu, index) => (
           <div key={index}>

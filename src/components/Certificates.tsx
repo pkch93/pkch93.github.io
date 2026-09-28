@@ -10,7 +10,7 @@ const Certificates: React.FC<Props> = ({ certificates }) => {
 
   return (
     <section className="mb-10">
-      <h3 className="text-2xl font-bold text-gray-900 border-b-2 border-gray-200 pb-2 mb-6">Certificates</h3>
+      <h3 className="text-2xl font-bold text-gray-900 border-b-2 border-gray-200 pb-2 mb-6">자격</h3>
       <div className="space-y-4">
         {certificates.map((cert, index) => (
           <div key={index} className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between">

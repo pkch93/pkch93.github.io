@@ -74,6 +74,14 @@ export const createSchemaCustomization: GatsbyNode["createSchemaCustomization"] 
         description: { type: "String" },
         stack: { type: "String" },
         details: { type: "[String]" },
+        subproject: { type: "Subproject" },
+      },
+    }),
+    schema.buildObjectType({
+      name: "Subproject",
+      fields: {
+        name: { type: "String" },
+        period: { type: "String" },
       },
     }),
     schema.buildObjectType({
